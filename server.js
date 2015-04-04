@@ -4,7 +4,7 @@ var serveStatic = require('serve-static')
 var port = process.env.port || 1337;
 
 // Serve up public/ftp folder
-var serve = serveStatic('public/ftp', {'index': ['index.html', 'index.htm']})
+var serve = serveStatic('.', {'index': ['index.html', 'index.htm']})
 
 // Create server
 var server = http.createServer(function(req, res){
@@ -14,12 +14,3 @@ var server = http.createServer(function(req, res){
 
 // Listen
 server.listen(port);
-
-/*
-var http = require('http');
-var port = process.env.port || 1337;
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
-*/

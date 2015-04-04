@@ -6,6 +6,7 @@
   "license": "MIT",
   "main": "server.js",
   "dependencies": {
+    "finalhandler": "^0.3.4",
     "serve-static": "^1.9.2"
   }
 }
